@@ -67,6 +67,10 @@ input[type="search"]::-webkit-search-results-decoration {
 /* Document setup
 /* -------------------------------------------------------------------------------- */
 
+html, body {
+    height: 100%;
+}
+
 body {
     -webkit-hyphens: auto;
     -webkit-text-size-adjust: 100%;
@@ -153,34 +157,33 @@ body {
 }
 
 /* -------------------------------------------------------------------------------- */
+/* Transition
+/* -------------------------------------------------------------------------------- */
+
+#page {
+    -webkit-transition: all .5s ease 0s;
+    transition: all .5s ease 0s;
+}
+
+/* -------------------------------------------------------------------------------- */
 /* Navigation
 /* -------------------------------------------------------------------------------- */
 
-#navigation {
-    background-color: #000;
-    color: #fff;
-    line-height: 50px;
-}
-
-#navigation > h1 {
-    box-sizing: border-box;
-    font-size: 15px;
-    height: 50px;
-    padding: 0 0 0 10px;
-}
+#navigation {}
 
 #nav {
     background-color: #252525;
     height: 100%;
-    position: absolute;
-    -webkit-transform: translateX(270px);
-    transform: translateX(270px);
+    line-height: 50px;
+    position: fixed;
     right: 0;
     top: 0;
     width: 270px;
+    z-index: -1;
 }
 
 #nav > h2 {
+    color: #ccc;
     font-size: 20px;
     height: 50px;
     padding: 0 0 0 20px;
@@ -200,4 +203,28 @@ body {
 
 #nav-items > .on > a {
     border-left-color: #23aedb;
+}
+
+#page > h1 {
+    background-color: #000;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 15px;
+    height: 50px;
+    line-height: 50px;
+    padding: 0 0 0 10px;
+}
+
+.open > #page {
+    -webkit-transform: translateX(-270px);
+    transform: translateX(-270px);
+}
+
+/* -------------------------------------------------------------------------------- */
+/* Page
+/* -------------------------------------------------------------------------------- */
+
+#page {
+    background-color: #fff;
+    min-height: 100%;
 }

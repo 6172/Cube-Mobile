@@ -11,7 +11,6 @@
     </head>
     <body>
         <header id="navigation">
-            <h1>Trustworthy</h1>
             <nav id="nav">
                 <h2 class="bd-1">Trustworthy</h2>
                 <ul id="nav-items">
@@ -22,9 +21,19 @@
                 </ul>
             </nav>
         </header>
-        <section class="page-index">
-            
+        <section id="page" class="page-index">
+            <h1>Trustworthy</h1>
         </section>
+        <script src="http://cdn.staticfile.org/seajs/2.3.0/sea.js"></script>
+        <script>
+            seajs.config({
+                base : './js/'
+            });
+            seajs.use('index');
+            // seajs.use('index', function(index) {
+            //     index.init();
+            // });
+        </script>
     </body>
 </html>
 
