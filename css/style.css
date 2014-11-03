@@ -1,0 +1,203 @@
+/* -------------------------------------------------------------------------------- */
+/* Global CSS
+/* -------------------------------------------------------------------------------- */
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, blockquote, address, big, cite, code, em, font, img, small, strike, sub, sup, li, ol, ul, dl, dt, dd, fieldset, form, label, legend, button, table, caption, tr, th, td,
+header, footer, nav, figure, article, section, audio, video, hgroup {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 100%;
+    font-family: inherit;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+fieldset {
+    border: none;
+}
+
+ol, ul {
+    list-style-type: none;
+}
+
+blockquote:before, 
+blockquote:after {
+    content: '';
+}
+
+a {
+    color: #222;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #111;
+}
+
+img {
+    border: none;
+    vertical-align: bottom;
+}
+
+a, input, textarea, button {
+    -webkit-appearance: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    border-radius: 0;
+    outline: none;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}
+
+/* -------------------------------------------------------------------------------- */
+/* Document setup
+/* -------------------------------------------------------------------------------- */
+
+body {
+    -webkit-hyphens: auto;
+    -webkit-text-size-adjust: 100%;
+    background-color: #2c3135;
+    color: #111;
+    background: #fafafa;
+    font: 16px Roboto, 'Droid Sans', 'Droid Sans Fallback', 'Heiti SC', 'Hiragino Sans GB', Tahoma, Arial, 'Microsoft YaHei', sans-serif;
+    hyphens: auto;
+    overflow-x: hidden;
+    word-break: break-word;
+}
+
+::-webkit-input-placeholder { color: #a9a9a9; }
+
+::selection {
+    background: #666;
+    color: #fff;
+}
+
+.hidden {
+    display: none;
+}
+
+.f-l {
+    float: left;
+}
+
+.f-r {
+    float: right;
+}
+
+.dis-table {
+    display: table;
+}
+
+.dis-table-cell {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.clearfix:after {
+    content: '';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+.cover-img {
+    display: block;
+    left: 0;
+    position: absolute;
+    top: 0;
+}
+
+.bd-1 {
+    position: relative;
+}
+
+.bd-1::after {
+    border-bottom: 1px solid #666;
+    bottom: -1px;
+    content: '';
+    left: 0;
+    position: absolute;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 2) {
+    .bd-1::after {
+        -webkit-transform: scale(.5);
+        transform: scale(.5);
+        width: 200%;
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio: 3) {
+    .bd-1::after {
+        -webkit-transform: scale(.33);
+        transform: scale(.33);
+        width: 300%;
+    }
+}
+
+/* -------------------------------------------------------------------------------- */
+/* Navigation
+/* -------------------------------------------------------------------------------- */
+
+#navigation {
+    background-color: #000;
+    color: #fff;
+    line-height: 50px;
+}
+
+#navigation > h1 {
+    box-sizing: border-box;
+    font-size: 15px;
+    height: 50px;
+    padding: 0 0 0 10px;
+}
+
+#nav {
+    background-color: #252525;
+    height: 100%;
+    position: absolute;
+    -webkit-transform: translateX(270px);
+    transform: translateX(270px);
+    right: 0;
+    top: 0;
+    width: 270px;
+}
+
+#nav > h2 {
+    font-size: 20px;
+    height: 50px;
+    padding: 0 0 0 20px;
+}
+
+#nav-items > li {
+    height: 50px;
+}
+
+#nav-items a {
+    border-left: 6px solid transparent;
+    color: #ccc;
+    display: block;
+    font-size: 14px;
+    padding: 0 0 0 40px;
+}
+
+#nav-items > .on > a {
+    border-left-color: #23aedb;
+}
