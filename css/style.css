@@ -157,6 +157,35 @@ body {
 }
 
 /* -------------------------------------------------------------------------------- */
+/* Component global settings
+/* -------------------------------------------------------------------------------- */
+
+.swipe-nav {
+    -webkit-align-items: center;
+    align-items: center;
+    bottom: 0;
+    display: -webkit-flex;
+    display: flex;
+    left: 0;
+    -webkit-justify-content: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+}
+
+.swipe-nav > a {
+    background-color: #d7d7d7;
+    border-radius: 5px;
+    height: 10px;
+    margin: 0 5px;
+    width: 10px;
+}
+
+.swipe-nav > .on {
+    background-color: #5d5d5d;
+}
+
+/* -------------------------------------------------------------------------------- */
 /* Transition
 /* -------------------------------------------------------------------------------- */
 
@@ -218,7 +247,7 @@ body {
 }
 
 /* -------------------------------------------------------------------------------- */
-/* Page
+/* Page and Page for nav opened
 /* -------------------------------------------------------------------------------- */
 
 #page {
@@ -227,7 +256,7 @@ body {
     z-index: 50;
 }
 
-#page > h1 {
+.menu-bar {
     background-color: #000;
     box-sizing: border-box;
     color: #fff;
@@ -235,6 +264,34 @@ body {
     height: 50px;
     line-height: 50px;
     padding: 0 0 0 10px;
+    position: relative;
+}
+
+.menu-icon {
+    background-color: #fff;
+    height: 2px;
+    position: absolute;
+    right: 15px;
+    top: 21px;
+    width: 17px;
+}
+
+.menu-icon:before,
+.menu-icon:after {
+    background-color: #fff;
+    content: '';
+    height: 2px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.menu-icon:before {
+    top: 5px;
+}
+
+.menu-icon:after {
+    top: 10px;
 }
 
 #page-mask {
@@ -257,13 +314,13 @@ body {
     display: block;
 }
 
-.page-index {
-    height: 100%;
-}
-
 /* -------------------------------------------------------------------------------- */
 /* Page Index
 /* -------------------------------------------------------------------------------- */
+
+.page-index {
+    height: 100%;
+}
 
 .swipe-index {
     height: -webkit-calc(100% - 50px);
@@ -289,4 +346,21 @@ body {
 
 .swipe-index-item > img {
     max-width: 100%;
+}
+
+.page-index > .swipe-nav {
+    bottom: 20px;
+}
+
+/* -------------------------------------------------------------------------------- */
+/* Page Products
+/* -------------------------------------------------------------------------------- */
+
+.page-products {
+    height: 100%;
+}
+
+
+.page-products > .swipe-nav {
+    bottom: 20px;
 }
