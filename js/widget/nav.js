@@ -8,7 +8,8 @@ define(function(require, exports, module) {
         pageMask = doc.querySelector('#page-mask'),
         button = doc.querySelector('#page > h1');
 
-    button.addEventListener('touchstart', function() {
+    button.addEventListener('touchstart', function(e) {
+        e.preventDefault();
         if(!opened) {
             body.classList.add('open');
         }else {

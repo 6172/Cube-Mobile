@@ -189,6 +189,7 @@ body {
 /* Transition
 /* -------------------------------------------------------------------------------- */
 
+#nav,
 #page {
     -webkit-transition: all .5s ease 0s;
     transition: all .5s ease 0s;
@@ -209,6 +210,8 @@ body {
     position: fixed;
     right: 0;
     top: 0;
+    -webkit-transform: translate(100%);
+    transform: translate(100%);
     width: 270px;
     z-index: 10;
 }
@@ -219,7 +222,7 @@ body {
 }
 
 .nav-wrap > h2 {
-    color: #ccc;
+    color: #fff;
     font-size: 20px;
     height: 50px;
     padding: 0 0 0 20px;
@@ -239,11 +242,42 @@ body {
 
 #nav-items > .on > a {
     border-left-color: #23aedb;
+    color: #fff;
 }
 
 .nav-fill {
-    height: -webkit-calc(100% - 200px);
-    height: calc(100% - 200px);
+    height: -webkit-calc(100% - 250px);
+    height: calc(100% - 250px);
+    position: relative;
+}
+
+.nav-contact {
+    bottom: 50%;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+
+.nav-contact > b,
+.nav-contact > span {
+    display: block;
+    color: #fff;
+}
+
+.nav-contact > b {
+    font-size: 25px;
+    font-weight: normal;
+    line-height: 30px;
+}
+
+.nav-contact > span {
+    font-size: 10px;
+    line-height: normal;
+}
+
+.open #nav {
+    -webkit-transform: translate(0);
+    transform: translate(0);
 }
 
 /* -------------------------------------------------------------------------------- */
@@ -270,8 +304,10 @@ body {
 .menu-icon {
     background-color: #fff;
     height: 2px;
+    line-height: 12px;
     position: absolute;
     right: 15px;
+    text-indent: -2.5em;
     top: 21px;
     width: 17px;
 }
@@ -357,7 +393,7 @@ body {
 /* -------------------------------------------------------------------------------- */
 
 .page-products {
-    height: 100%;
+    min-height: 100%;
 }
 
 
@@ -365,12 +401,21 @@ body {
     bottom: 20px;
 }
 
+
+/* -------------------------------------------------------------------------------- */
+/* Page Video
+/* -------------------------------------------------------------------------------- */
+
+.page-video {
+    min-height: 100%;
+}
+
 /* -------------------------------------------------------------------------------- */
 /* Page News
 /* -------------------------------------------------------------------------------- */
 
 .page-news {
-    height: 100%;
+    min-height: 100%;
 }
 
 .posts-introduction,
@@ -410,17 +455,71 @@ body {
 .post-header h4 {
     color: #2e2e2e;
     font-size: 15px;
-    height: 18px;
+    line-height: 18px;
 }
 
 .post-header div {
     color: #666;
     font-size: 14px;
     height: 23px;
+    text-align: justify;
 }
 
 .post-thumb {}
 
 .post-thumb img {
+    max-width: 100%;
+}
+
+/* -------------------------------------------------------------------------------- */
+/* Page About
+/* -------------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------------- */
+/* Page Product Detail
+/* -------------------------------------------------------------------------------- */
+
+.page-product {
+    min-height: 100%;
+}
+
+.product-thumb {}
+
+.product-thumb > img {
+    max-width: 100%;
+}
+
+.product-main {
+    background-color: #fff;
+    padding: 22px;
+}
+
+.product-title {}
+
+.product-title > h2 {
+    color: #333;
+    font-size: 22px;
+    line-height: 24px;
+}
+
+.product-title > h3 {
+    color: #666;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.product-content {
+    color: #6b6b6b;
+    font-size: 13px;
+    line-height: 20px;
+    margin: 10px 0 0;
+    text-align: justify;
+}
+
+.product-content p {
+    margin: 0 0 10px 0;
+}
+
+.product-content img {
     max-width: 100%;
 }

@@ -14,6 +14,6 @@ define(function(require, exports, module) {
             // swpieNavs[currentIndex].className = '';
             // swpieNavs[index].className = 'on';
             // currentIndex = index;
-    //     }
+        // }
     // });
 });
