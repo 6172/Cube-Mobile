@@ -6,7 +6,7 @@
         <meta content="yes" name="apple-mobile-web-app-capable">
         <meta content="black" name="apple-mobile-web-app-status-bar-style">
         <meta content="telephone=no" name="format-detection">
-        <title>Index</title>
+        <title>精唯信诚 - 关于我们</title>
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
@@ -20,7 +20,7 @@
                         <li class="bd-1"><a href="products.html">产品列表</a></li>
                         <li class="bd-1"><a href="videos.html">视讯</a></li>
                         <li class="bd-1"><a href="news.html">新闻-活动</a></li>
-                        <li class="on bd-1"><a href="about.html">关于我们</a></li>
+                        <li class="on bd-1"><a href="contact.html">关于我们</a></li>
                     </ul>
                     <footer class="nav-fill">
                         <div class="nav-contact">
@@ -33,12 +33,28 @@
         </header>
         <!-- 导航 END -->
         <!-- 页面内容区 -->
-        <section id="page" class="page-about">
+        <section id="page" class="page-contact">
             <h1 class="menu-bar">
                 <span>Trustworthy</span>
                 <span class="menu-icon">目录</span>
             </h1>
+            <section class="contact-title">
+                <h2>联系我们</h2>
+                <p>如果有任何问题，欢迎随时通过电话与邮件的方式联系我们。我们将为您提供帮助</p>
+            </section>
+            <section class="contact-info">
+                <strong>400-818-6865</strong>
+                <a href="mailto:service@example.com">[通过电子邮件的方式联系我们]</a>
+            </section>
+            <section class="contact-other">
+                <button id="joinus">加入我们</button>
+                <button id="system">精唯体系</button>
+            </section>
         </section>
+        <footer class="contact-footer">
+            <span>@Trustworthy 2014</span>
+            <a href="http://www.trustworthy.com.cn">桌面版</a>
+        </footer>
         <!-- 页面内容区 END -->
         <!-- 导航出现时的遮罩 -->
         <div id="page-mask"></div>
@@ -48,7 +64,7 @@
             seajs.config({
                 base : './js/task/'
             });
-            seajs.use('about');
+            seajs.use('contact');
         </script>
     </body>
 </html>

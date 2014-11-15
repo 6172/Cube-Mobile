@@ -2,7 +2,6 @@
 
 define(function(require, exports, module) {
     require('../widget/nav');
-    var Swipe = require('../widget/swipe');
 
     // 选择视频分类
     var select = document.querySelector('#video-selector'),
@@ -35,9 +34,6 @@ define(function(require, exports, module) {
         currentItem.classList.remove('on');
     });
 
-    select.querySelector('.video-options').addEventListener('touchmove', function(e) {
-        e.preventDefault();
-    }, false);
     // // 视频左右切屏
     // var swpieBox = document.querySelector('#swipe-video');
     // var swipeMover = document.querySelector('#swipe-video-wrap');
