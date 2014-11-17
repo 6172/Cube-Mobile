@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <meta content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width" name="viewport">
+        <meta content="yes" name="apple-mobile-web-app-capable">
+        <meta content="black" name="apple-mobile-web-app-status-bar-style">
+        <meta content="telephone=no" name="format-detection">
+        <title>精唯信诚 - 产品列表</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <!-- 导航 -->
+        <header id="navigation">
+            <nav id="nav">
+                <div class="nav-wrap">
+                    <h2 class="bd-1">Trustworthy</h2>
+                    <ul id="nav-items">
+                        <li class="bd-1"><a href="index.html">首页</a></li>
+                        <li class="bd-1"><a href="products.html">产品列表</a></li>
+                        <li class="bd-1"><a href="videos.html">视讯</a></li>
+                        <li class="bd-1"><a href="news.html">新闻-活动</a></li>
+                        <li class="bd-1"><a href="contact.html">关于我们</a></li>
+                    </ul>
+                    <footer class="nav-fill">
+                        <div class="nav-contact">
+                            <b>400-818-6865</b>
+                            <span>周一至周五 9:00 - 18:00（市话免费）</span>
+                        </div>
+                    </footer>
+                </div>
+            </nav>
+        </header>
+        <!-- 导航 END -->
+        <!-- 页面内容区 -->
+        <section id="page" class="page-plist">
+            <h1 class="menu-bar">
+                <span>Trustworthy</span>
+                <span class="menu-icon">目录</span>
+            </h1>
+            <nav class="plist-nav">
+                <div class="plist-brand">
+                    <h3 class="plist-brand-select">
+                        <span>品牌：</span>
+                        <b>3D System</b>
+                    </h3>
+                    <ul class="plist-menu">
+                        <li><a href="">Option A</a></li>
+                        <li><a href="">Option B</a></li>
+                        <li><a href="">3D System</a></li>
+                        <li><a href="">Option D</a></li>
+                    </ul>
+                </div>
+                <div class="plist-tech">
+                    <h3 class="plist-tech-select">
+                        <span>成型工艺：</span>
+                        <b>Option C</b>
+                    </h3>
+                    <ul class="plist-menu">
+                        <li data-process="MJP">Option A</li>
+                        <li data-process="CJP">Option B</li>
+                        <li data-process="SLS">Option C</li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="plist-content">
+                <a href="" class="plist-item">
+                    <figure>
+                        <img src="http://placehold.it/280x230" alt="">
+                    </figure>
+                    <h2>ProJet 3500 CPX</h2>
+                </a>
+                <a href="" class="plist-item">
+                    <figure>
+                        <img src="http://placehold.it/280x230" alt="">
+                    </figure>
+                    <h2>ProJet 3500 HD</h2>
+                </a>
+                <a href="" class="plist-item">
+                    <figure>
+                        <img src="http://placehold.it/280x230" alt="">
+                    </figure>
+                    <h2>ProJet 120</h2>
+                </a>
+            </div>
+        </section>
+        <!-- 页面内容区 END -->
+        <!-- 导航出现时的遮罩 -->
+        <div id="page-mask"></div>
+        <!-- 导航出现时的遮罩 END -->
+        <script src="http://cdn.staticfile.org/seajs/2.3.0/sea.js"></script>
+        <script>
+            seajs.config({
+                base : './js/task/',
+                alias: {
+                    masonry : 'http://cdn.staticfile.org/masonry/3.1.5/masonry.pkgd.min.js'
+                }
+            });
+            seajs.use('product-list');
+        </script>
+    </body>
+</html>
+
