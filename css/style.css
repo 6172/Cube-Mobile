@@ -140,6 +140,13 @@ body {
     transform-origin: 0 0;
 }
 
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+
 @media screen and (-webkit-min-device-pixel-ratio: 2) {
     .bd-1::after {
         -webkit-transform: scale(.5);
@@ -206,9 +213,10 @@ body {
 /* -------------------------------------------------------------------------------- */
 
 #nav,
-#page,
+.page,
 .video-options,
-.video-selector {
+.video-selector,
+.plist-content {
     -webkit-transition: all .5s ease 0s;
     transition: all .5s ease 0s;
 }
@@ -301,7 +309,7 @@ body {
 /* Page and Page for nav opened
 /* -------------------------------------------------------------------------------- */
 
-#page {
+.page {
     background-color: #fff;
     position: relative;
     z-index: 50;
@@ -742,7 +750,140 @@ body {
 /* -------------------------------------------------------------------------------- */
 
 .page-plist {
+    background-color: #424242;
     min-height: 100%;
+}
+
+.plist-nav {
+    background-color: #fff;
+    box-shadow: 0 5px 6px rgba(0, 0, 0, .25);
+    display: -webkit-flex;
+    display: flex;
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+    z-index: 60;
+}
+
+.plist-brand,
+.plist-tech {
+    color: #3d3d3d;
+    font-size: 14px;
+    -webkit-flex: 1;
+    flex: 1;
+    position: relative;
+}
+
+.plist-brand-select > b,
+.plist-tech-select > b {
+    font-weight: normal;
+}
+
+.plist-brand-select,
+.plist-tech-select {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.plist-brand-select {
+    background: url(../images/brand.png) no-repeat left center;
+    background-size: 30px;
+    padding: 0 15px 0 30px;
+}
+
+.plist-tech-select {
+    padding: 0 15px 0 10px;
+}
+
+.plist-brand-select:after,
+.plist-tech-select:after {
+    border-color: #424242 transparent transparent;
+    border-style: solid;
+    border-width: 5px;
+    content: '';
+    height: 0;
+    position: absolute;
+    right: 3px;
+    top: 17px;
+    width: 0;
+}
+
+.plist-menus {
+    background-color: rgba(51, 51, 51, .7);
+    display: none;
+    height: -webkit-calc(100% - 90px);
+    height: calc(100% - 90px);
+    position: absolute;
+    top: 90px;
+    width: 100%;
+    z-index: 50;
+}
+
+.brand-menu,
+.tech-menu {
+    float: left;
+    height: 10px;
+    position: relative;
+    width: 50%;
+}
+
+.plist-menu {
+    background-color: #fff;
+    color: #5c5c5c;
+    font-size: 14px;
+    height: 175px;
+    line-height: 35px;
+    overflow-x: hidden;
+    padding: 15px 25px 15px 20px;
+    position: absolute;
+    right: 15px;
+    top: 0;
+    -webkit-overflow-scrolling: touch;
+}
+
+.plist-menu > li::after {
+    border-bottom-color: #dadada;
+}
+
+.plist-menu a {
+    color: #5c5c5c;
+}
+
+.plist-content {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
+    padding: 12px;
+}
+
+.plist-item {
+    display: block;
+    margin: 13px 0 0;
+    width: 48%;
+}
+
+.plist-thumb {}
+
+.plist-thumb > img {
+    display: block;
+    max-width: 100%;
+}
+
+.plist-item > h2 {
+    color: #ebebeb;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 36px;
+}
+
+@media screen and (orientation:landscape) {
+    .plist-item {
+        width: 30%;
+    }
 }
 
 /* -------------------------------------------------------------------------------- */

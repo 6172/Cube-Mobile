@@ -2,7 +2,4 @@
 
 define(function(require, exports, module) {
     require('../widget/nav');
-    require('masonry');
-
-    
 });
