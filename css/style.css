@@ -832,8 +832,8 @@ body {
     background-color: #fff;
     color: #5c5c5c;
     font-size: 14px;
-    height: 175px;
     line-height: 35px;
+    max-height: 175px;
     overflow-x: hidden;
     padding: 15px 25px 15px 20px;
     position: absolute;

@@ -40,94 +40,99 @@
             </h1>
             <nav class="plist-nav">
                 <div class="plist-brand">
-                    <h3 class="plist-brand-select ellipsis">
+                    <h3 class="plist-brand-select ellipsis" id="brand">
+                        <!-- 此处显示当前品牌 -->
                         <span>品牌：</span>
                         <b>全部品牌</b>
                     </h3>
                 </div>
                 <div class="plist-tech">
-                    <h3 class="plist-tech-select ellipsis">
+                    <h3 class="plist-tech-select ellipsis" id="tech">
+                        <!-- 如果当前品牌有下属工艺，此处默认显示“全部工艺”，没有工艺不显示 span 和 b -->
                         <span>成型工艺：</span>
                         <b>全部工艺ABCDE</b>
                     </h3>
                 </div>
             </nav>
-            <div class="plist-menus">
+            <div class="plist-menus" id="menus">
                 <div class="brand-menu">
                     <ul class="plist-menu">
-                        <li class="bd-1"><a href="">全部品牌</a></li>
-                        <li class="bd-1"><a href="">Option A</a></li>
-                        <li class="bd-1"><a href="">Option B</a></li>
-                        <li class="bd-1"><a href="">3D System</a></li>
-                        <li class="bd-1"><a href="">Option D</a></li>
-                        <li class="bd-1"><a href="">Option E</a></li>
+                        <!-- 此处输出所有品牌，点击某个后即跳转显示相应品牌 -->
+                        <li class="bd-1"><a href="?brand=all">全部品牌</a></li>
+                        <li class="bd-1"><a href="?brand=a">Option A</a></li>
+                        <li class="bd-1"><a href="?brand=b">Option B</a></li>
+                        <li class="bd-1"><a href="?brand=3d">3D System</a></li>
+                        <li class="bd-1"><a href="?brand=d">Option D</a></li>
+                        <li class="bd-1"><a href="?brand=e">Option E</a></li>
                     </ul>
                 </div>
                 <div class="tech-menu">
                     <ul class="plist-menu">
-                        <li class="bd-1" data-process="MJQ">全部工艺</li>
-                        <li class="bd-1" data-process="MJP">Option A</li>
-                        <li class="bd-1" data-process="CJP">Option B</li>
-                        <li class="bd-1" data-process="SLS">Option C</li>
-                        <li class="bd-1" data-process="SLA">Option D</li>
-                        <li class="bd-1" data-process="SLC">Option E</li>
+                        <!-- 当前品牌如果有下属工艺，在此处列出所有工艺，代表所有工艺的用all即可 -->
+                        <li class="bd-1" data-process="all">全部工艺</li>
+                        <li class="bd-1" data-process="p-a">Option A</li>
+                        <li class="bd-1" data-process="p-b">Option B</li>
+                        <li class="bd-1" data-process="p-c">Option C</li>
+                        <li class="bd-1" data-process="p-d">Option D</li>
+                        <li class="bd-1" data-process="p-e">Option E</li>
                     </ul>
                 </div>
             </div>
             <div class="plist-content" id="plist-content">
-                <a href="product-detail.html" class="plist-item">
+                <!-- 输出具体产品 -->
+                <a href="product-detail.html" class="plist-item" data-process="p-a">
                     <figure class="plist-thumb">
                         <img src="http://placehold.it/560x460" alt="">
                     </figure>
-                    <h2>ProJet 3500 CPX</h2>
+                    <h2>ProJet 3500 CPX A1</h2>
                 </a>
-                <a href="product-detail.html" class="plist-item">
+                <a href="product-detail.html" class="plist-item" data-process="p-a">
                     <figure class="plist-thumb">
                         <img src="http://placehold.it/560x460" alt="">
                     </figure>
-                    <h2>ProJet 3500 HD</h2>
+                    <h2>ProJet 3500 HD A2</h2>
                 </a>
-                <a href="product-detail.html" class="plist-item">
+                <a href="product-detail.html" class="plist-item" data-process="p-a">
                     <figure class="plist-thumb">
                         <img src="http://placehold.it/560x460" alt="">
                     </figure>
-                    <h2>ProJet 120</h2>
+                    <h2>ProJet 120 A3</h2>
                 </a>
-                <a href="product-detail.html" class="plist-item">
+                <a href="product-detail.html" class="plist-item" data-process="p-b">
                     <figure class="plist-thumb">
                         <img src="http://placehold.it/560x460" alt="">
                     </figure>
-                    <h2>ProJet 3500 CPX</h2>
+                    <h2>ProJet 3500 CPX B</h2>
                 </a>
-                <a href="product-detail.html" class="plist-item">
+                <a href="product-detail.html" class="plist-item" data-process="p-c">
                     <figure class="plist-thumb">
                         <img src="http://placehold.it/560x460" alt="">
                     </figure>
-                    <h2>ProJet 3500 HD</h2>
+                    <h2>ProJet 3500 HD C</h2>
                 </a>
-                <a href="product-detail.html" class="plist-item">
+                <a href="product-detail.html" class="plist-item" data-process="p-d">
                     <figure class="plist-thumb">
                         <img src="http://placehold.it/560x460" alt="">
                     </figure>
-                    <h2>ProJet 120</h2>
+                    <h2>ProJet 120 D</h2>
                 </a>
-                <a href="product-detail.html" class="plist-item">
+                <a href="product-detail.html" class="plist-item" data-process="p-e">
                     <figure class="plist-thumb">
                         <img src="http://placehold.it/560x460" alt="">
                     </figure>
-                    <h2>ProJet 3500 CPX</h2>
+                    <h2>ProJet 3500 CPX E1</h2>
                 </a>
-                <a href="product-detail.html" class="plist-item">
+                <a href="product-detail.html" class="plist-item" data-process="p-e">
                     <figure class="plist-thumb">
                         <img src="http://placehold.it/560x460" alt="">
                     </figure>
-                    <h2>ProJet 3500 HD</h2>
+                    <h2>ProJet 3500 HD E2</h2>
                 </a>
-                <a href="product-detail.html" class="plist-item">
+                <a href="product-detail.html" class="plist-item" data-process="p-e">
                     <figure class="plist-thumb">
                         <img src="http://placehold.it/560x460" alt="">
                     </figure>
-                    <h2>ProJet 120</h2>
+                    <h2>ProJet 120 E3</h2>
                 </a>
             </div>
         </section>
