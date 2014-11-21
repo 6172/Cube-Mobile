@@ -320,6 +320,7 @@ body {
 
 .menu-bar {
     background-color: #000;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     color: #fff;
     font-size: 15px;
@@ -329,6 +330,19 @@ body {
     position: relative;
 }
 
+.menu-bar a {
+    color: #fff;
+    display: block;
+    width: 50%;
+}
+
+.co-logo {
+    background: url(../images/logo.png) no-repeat 0% 50%;
+    background-size: 18px;
+    display: block;
+    padding: 0 0 0 25px;
+}
+
 .menu-icon {
     background-color: #fff;
     height: 2px;
@@ -336,7 +350,7 @@ body {
     position: absolute;
     right: 15px;
     text-indent: -2.5em;
-    top: 21px;
+    top: 18px;
     width: 17px;
 }
 

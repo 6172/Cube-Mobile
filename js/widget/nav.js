@@ -9,13 +9,15 @@ define(function(require, exports, module) {
         button = doc.querySelector('#page > h1');
 
     button.addEventListener('touchstart', function(e) {
-        e.preventDefault();
-        if(!opened) {
-            body.classList.add('open');
-        }else {
-            body.classList.remove('open');
+        if(e.target.tagName.toLowerCase() !== 'a') {
+            e.preventDefault();
+            if(!opened) {
+                body.classList.add('open');
+            }else {
+                body.classList.remove('open');
+            }
+            opened = !opened;
         }
-        opened = !opened;
     }, false);
 
     pageMask.addEventListener('touchstart', function(e) {
