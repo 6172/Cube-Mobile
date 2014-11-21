@@ -23,7 +23,7 @@ define(function(require, exports, module) {
     selectItems = Array.prototype.slice.call(selectItems, 0);
     currentItem = selectItems[0];
     selectItems.forEach(function(ele, index) {
-        selectItems[index].addEventListener('touchstart', function() {
+        ele.addEventListener('touchstart', function() {
             currentItem.classList.remove('on');
             currentItem = this;
             currentItem.classList.add('on');

@@ -216,7 +216,10 @@ body {
 .page,
 .video-options,
 .video-selector,
-.plist-content {
+.plist-content,
+.spread-title,
+.spread-title::after,
+.spread-box {
     -webkit-transition: all .5s ease 0s;
     transition: all .5s ease 0s;
 }
@@ -558,6 +561,7 @@ body {
 
 .page-video .swipe {
     margin: 0 auto;
+    visibility: visible;
     width: 296px;
 }
 
@@ -701,7 +705,7 @@ body {
     padding-bottom: 10px;
 }
 
-.contact-other > button {
+.contact-other > a {
     background-color: transparent;
     background-image: url(../images/contact.png);
     background-repeat: no-repeat;
@@ -981,4 +985,76 @@ body {
 
 .product-content img {
     max-width: 100%;
+}
+
+/* -------------------------------------------------------------------------------- */
+/* Page System & Join Us
+/* -------------------------------------------------------------------------------- */
+
+.page-join,
+.page-system {
+    min-height: 100%;
+}
+
+.page-join > h2,
+.page-system > h2 {
+    font-size: 35px;
+    line-height: 62px;
+    margin: 0 0 15px;
+    padding: 0 20px;
+}
+
+.spread-box {
+    height: 30px;
+    overflow: hidden;
+}
+
+.spread-title {
+    color: #333;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 20px;
+    position: relative;
+}
+
+.spread-title::before,
+.spread-title::after {
+    background-color: #959595;
+    content: '';
+    position: absolute;
+}
+
+.spread-title::before {
+    height: 1px;
+    right: 25px;
+    top: 13px;
+    width: 13px;
+}
+
+.spread-title::after {
+    height: 13px;
+    right: 31px;
+    top: 7px;
+    width: 1px;
+}
+
+.spread-content {
+    background-color: #f5f7f8;
+    font-size: 12px;
+    color: #666;
+    line-height: 20px;
+    padding: 20px;
+}
+
+.spread-content h4 {
+    color: #666;
+    font-weight: bold;
+}
+
+.open > .spread-title {
+    background-color: #eee;
+}
+
+.open > .spread-title::after {
+    height: 0;
 }
