@@ -219,7 +219,9 @@ body {
 .plist-content,
 .spread-title,
 .spread-title::after,
-.spread-box {
+.spread-box,
+.product-fieldset > input,
+.product-order > .submit {
     -webkit-transition: all .5s ease 0s;
     transition: all .5s ease 0s;
 }
@@ -999,6 +1001,84 @@ body {
 
 .product-content img {
     max-width: 100%;
+}
+
+.product-order {
+    padding: 0 22px 22px;
+}
+
+.product-order > h3 {
+    color: #333;
+    font-size: 15px;
+    line-height: 24px;
+}
+
+.product-fieldset {
+    margin: 10px 0 0;
+}
+
+.product-fieldset > input,
+.product-fieldset > textarea {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    margin: 0 0 10px;
+    padding: 0 15px;
+    width: 100%;
+}
+
+.product-fieldset > input {
+    height: 30px;
+    line-height: 30px;
+}
+
+.product-fieldset > textarea {
+    height: 120px;
+    line-height: 24px;
+}
+
+.product-order > .submit {
+    background-color: #ccc;
+    border-radius: 6px;
+    color: #666;
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    width: 50%;
+}
+
+.product-order > .submit::before {
+    content: '发 送';
+}
+
+.product-order > .on-send {
+    background-color: #6dabde;
+    color: #fff;
+}
+
+.product-order > .on-send::before {
+    content: '发 送 中';
+}
+
+.product-order > .failed {
+    background-color: #f75a53;
+    color: #fff;
+}
+
+.product-order > .failed::before {
+    content: '发送失败';
+}
+
+.product-order > .success {
+    background-color: #169e49;
+    color: #fff;
+}
+
+.product-order > .success::before {
+    content: '发送成功';
 }
 
 /* -------------------------------------------------------------------------------- */
