@@ -252,11 +252,36 @@ body {
     overflow-x: hidden;
 }
 
-.nav-wrap > h2 {
-    color: #fff;
-    font-size: 20px;
+.search-form {
     height: 50px;
     padding: 0 0 0 20px;
+    position: relative;
+}
+
+.search-form > input {
+    border: none;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    color: #666;
+    display: block;
+    height: 24px;
+    padding: 0 10px 0 28px;
+    position: relative;
+    top: 13px;
+    width: 186px;
+    word-break: break-all;
+}
+
+.search-form > button {
+    background: transparent url(../images/search.png) no-repeat 0 0;
+    background-size: 24px;
+    border: none;
+    height: 24px;
+    left: 20px;
+    position: absolute;
+    text-indent: -9999em;
+    top: 13px;
+    width: 24px;
 }
 
 #nav-items > li {
@@ -284,7 +309,7 @@ body {
 .nav-contact {
     position: absolute;
     text-align: center;
-    top: 30%;
+    top: 25%;
     width: 100%;
 }
 
@@ -303,6 +328,33 @@ body {
 .nav-contact > span {
     font-size: 10px;
     line-height: normal;
+}
+
+.weibo {
+    -webkit-align-items: center;
+    align-items: center;
+    color: #fff;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 15px;
+    height: 23px;
+    line-height: 23px;
+    margin: 25px 0 0;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+
+.weibo:hover {
+    color: #fff;
+}
+
+.icon-weibo {
+    background: url(../images/weibo.png) no-repeat 0 0;
+    background-size: 23px;
+    border-radius: 50%;
+    height: 23px;
+    margin: 0 8px 0 0;
+    width: 23px;
 }
 
 .open #nav {
@@ -870,7 +922,8 @@ body {
     color: #5c5c5c;
 }
 
-.plist-content {
+.plist-content,
+.search-content {
     display: -webkit-flex;
     display: flex;
     -webkit-flex-wrap: wrap;
@@ -880,20 +933,23 @@ body {
     padding: 12px;
 }
 
-.plist-item {
+.plist-item,
+.search-item {
     display: block;
     margin: 13px 0 0;
     width: 48%;
 }
 
-.plist-thumb {}
+.plist-thumb, .search-thumb {}
 
-.plist-thumb > img {
+.plist-thumb > img,
+.search-thumb > img {
     display: block;
     max-width: 100%;
 }
 
-.plist-item > h2 {
+.plist-item > h2,
+.search-item > h2 {
     color: #ebebeb;
     font-size: 13px;
     font-weight: normal;
@@ -901,7 +957,8 @@ body {
 }
 
 @media screen and (orientation:landscape) {
-    .plist-item {
+    .plist-item,
+    .search-item {
         width: 30%;
     }
 }
@@ -1151,4 +1208,45 @@ body {
 
 .open > .spread-title::after {
     height: 0;
+}
+
+/* -------------------------------------------------------------------------------- */
+/* Page Search
+/* -------------------------------------------------------------------------------- */
+
+.page-search {
+    background-color: #424242;
+    min-height: 100%;
+}
+
+
+.page-search > h2 {
+    color: #ccc;
+    font-size: 25px;
+    line-height: 52px;
+    margin: 0 12px;
+}
+
+.search-no-result {
+    color: #fff;
+    font-size: 18px;
+    line-height: 21px;
+    margin: 80px auto 0;
+    padding: 5px 0 5px 70px;
+    position: relative;
+    text-align: justify;
+    width: 240px;
+}
+
+.search-no-result::after {
+    background: #fff url(../images/search.png) no-repeat 50% 50%;
+    background-size: 36px;
+    border-radius: 26px;
+    content: '';
+    height: 52px;
+    left: 0;
+    margin: -26px 0 0;
+    position: absolute;
+    top: 50%;
+    width: 52px;
 }

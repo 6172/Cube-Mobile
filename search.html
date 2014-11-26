@@ -6,7 +6,7 @@
         <meta content="yes" name="apple-mobile-web-app-capable">
         <meta content="black" name="apple-mobile-web-app-status-bar-style">
         <meta content="telephone=no" name="format-detection">
-        <title>精唯信诚 - 关于我们</title>
+        <title>精唯信诚 - 搜索结果</title>
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
@@ -23,7 +23,7 @@
                         <li class="bd-1"><a href="products.html">产品列表</a></li>
                         <li class="bd-1"><a href="videos.html">视讯</a></li>
                         <li class="bd-1"><a href="news.html">新闻-活动</a></li>
-                        <li class="on bd-1"><a href="contact.html">关于我们</a></li>
+                        <li class="bd-1"><a href="contact.html">关于我们</a></li>
                     </ul>
                     <footer class="nav-fill">
                         <div class="nav-contact">
@@ -40,28 +40,38 @@
         </header>
         <!-- 导航 END -->
         <!-- 页面内容区 -->
-        <section id="page" class="page page-contact">
+        <section id="page" class="page page-search">
             <h1 class="menu-bar">
-                <span class="co-logo">Trustworthy</span>
+                <span>搜索</span>
                 <span class="menu-icon">目录</span>
             </h1>
-            <section class="contact-title">
-                <h2>联系我们</h2>
-                <p>如果有任何问题，欢迎随时通过电话与邮件的方式联系我们。我们将为您提供帮助</p>
-            </section>
-            <section class="contact-info">
-                <strong>400-818-6865</strong>
-                <a href="mailto:service@example.com">[通过电子邮件的方式联系我们]</a>
-            </section>
-            <section class="contact-other">
-                <a id="joinus" href="join.html">加入我们</a>
-                <a id="system" href="system.html">精唯体系</a>
-            </section>
+            <h2 class="bd-1">搜索结果：</h2>
+            <div class="search-content">
+                <!-- 无结果展示此提示框 -->
+                <p class="search-no-result">
+                    抱歉，没有找到“搜索关键字”有关的产品信息。
+                </p>
+                <!-- 有结果则循环展示结果 -->
+                <a href="product-detail.html" class="search-item">
+                    <figure class="search-thumb">
+                        <img src="http://placehold.it/560x460" alt="">
+                    </figure>
+                    <h2>ProJet 3500 CPX A1</h2>
+                </a>
+                <a href="product-detail.html" class="search-item">
+                    <figure class="search-thumb">
+                        <img src="http://placehold.it/560x460" alt="">
+                    </figure>
+                    <h2>ProJet 3500 HD A2</h2>
+                </a>
+                <a href="product-detail.html" class="search-item">
+                    <figure class="search-thumb">
+                        <img src="http://placehold.it/560x460" alt="">
+                    </figure>
+                    <h2>ProJet 120 A3</h2>
+                </a>
+            </div>
         </section>
-        <footer class="contact-footer">
-            <span>@Trustworthy 2014</span>
-            <a href="http://www.trustworthy.com.cn">桌面版</a>
-        </footer>
         <!-- 页面内容区 END -->
         <!-- 导航出现时的遮罩 -->
         <div id="page-mask"></div>
@@ -71,7 +81,7 @@
             seajs.config({
                 base : './js/task/'
             });
-            seajs.use('contact');
+            seajs.use('index');
         </script>
     </body>
 </html>

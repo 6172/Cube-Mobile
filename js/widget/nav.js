@@ -27,4 +27,12 @@ define(function(require, exports, module) {
             opened = !opened;
         }
     }, false);
+
+    var searchForm = doc.querySelector('#search-form');
+
+    searchForm.addEventListener('submit', function(e) {
+        if(this[0].value.replace(/\s/, '') === '') {
+            e.preventDefault();
+        }
+    }, false);
 });
