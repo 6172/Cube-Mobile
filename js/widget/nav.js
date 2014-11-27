@@ -3,6 +3,7 @@
 define(function(require, exports, module) {
     var doc = document;
 
+    // 菜单、导航逻辑
     var opened = false;
     var body = doc.body,
         pageMask = doc.querySelector('#page-mask'),
@@ -28,6 +29,7 @@ define(function(require, exports, module) {
         }
     }, false);
 
+    // 全局搜索逻辑
     var searchForm = doc.querySelector('#search-form');
 
     searchForm.addEventListener('submit', function(e) {

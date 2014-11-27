@@ -2,6 +2,7 @@
 
 define(function(require, exports, module) {
     require('../widget/nav');
+    require('../widget/to-top');
 
     var doc = document,
         orderForm = doc.getElementById('order-form'),

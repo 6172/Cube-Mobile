@@ -2,6 +2,7 @@
 
 define(function(require, exports, module) {
     require('../widget/nav');
+    require('../widget/to-top');
     var Swipe = require('../widget/swipe');
 
     var swpieBox = document.querySelector('#page > .swipe');

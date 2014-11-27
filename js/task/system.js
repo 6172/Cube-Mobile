@@ -2,6 +2,7 @@
 
 define(function(require, exports, module) {
     require('../widget/nav');
+    require('../widget/to-top');
 
     var boxs = document.querySelectorAll('.spread-box');
     boxs = Array.prototype.slice.call(boxs, 0);
