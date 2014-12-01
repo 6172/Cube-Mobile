@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+    <head>
+        <meta charset="utf-8">
+        <meta content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width" name="viewport">
+        <meta content="yes" name="apple-mobile-web-app-capable">
+        <meta content="black" name="apple-mobile-web-app-status-bar-style">
+        <meta content="telephone=no" name="format-detection">
+        <title>精唯信诚 - 关于我们</title>
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <!-- 导航 -->
+        <header id="navigation">
+            <nav id="nav">
+                <div class="nav-wrap">
+                    <form action="search.html" class="search-form bd-1" id="search-form">
+                        <input type="search" placeholder="搜索产品名称" name="keyword">
+                        <button type="submit">提交</button>
+                    </form>
+                    <ul id="nav-items">
+                        <li class="bd-1"><a href="index.html">首页</a></li>
+                        <li class="bd-1"><a href="products.html">产品列表</a></li>
+                        <li class="bd-1"><a href="videos.html">视讯</a></li>
+                        <li class="bd-1"><a href="news.html">新闻-活动</a></li>
+                        <li class="bd-1"><a href="contact.html">关于我们</a></li>
+                    </ul>
+                    <footer class="nav-fill">
+                        <div class="nav-contact">
+                            <b>400-818-6865</b>
+                            <span>周一至周五 9:00 - 18:00（市话免费）</span>
+                            <a href="http://weibo.com/u/3579365405" target="_blank" class="weibo">
+                                <b class="icon-weibo"></b>
+                                <span>关注官方微博</span>
+                            </a>
+                        </div>
+                    </footer>
+                </div>
+            </nav>
+        </header>
+        <!-- 导航 END -->
+        <!-- 页面内容区 -->
+        <section id="page" class="page page-about">
+            <h1 class="menu-bar">
+                <span class="co-logo">Trustworthy</span>
+                <span class="menu-icon">目录</span>
+            </h1>
+            <div class="about-p about-p-1">
+                <img src="images/about-1.png" alt="">
+            </div>
+            <div class="about-p about-p-2">
+                <img src="images/about-2.png" alt="">
+            </div>
+            <div class="about-p about-p-3">
+                <img src="images/about-3.png" alt="">
+            </div>
+            <div class="about-p about-p-4">
+                <img src="images/about-4.png" alt="">
+            </div>
+            <div class="about-p about-p-5">
+                <a href="index.html">
+                    <img src="images/about-5.png" alt="">
+                </a>
+            </div>
+        </section>
+        <!-- 页面内容区 END -->
+        <!-- 导航出现时的遮罩 -->
+        <div id="page-mask"></div>
+        <!-- 导航出现时的遮罩 END -->
+        <script src="http://cdn.staticfile.org/seajs/2.3.0/sea.js"></script>
+        <script>
+            seajs.config({
+                base : './js/task/'
+            });
+            seajs.use('contact');
+        </script>
+    </body>
+</html>

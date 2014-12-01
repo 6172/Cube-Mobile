@@ -1288,3 +1288,47 @@ body {
     top: 50%;
     width: 52px;
 }
+
+/* -------------------------------------------------------------------------------- */
+/* Page About
+/* -------------------------------------------------------------------------------- */
+
+.page-about {
+    min-height: 100%;
+}
+
+.about-p {
+    font-size: 0;
+    text-align: center;
+}
+
+.about-p-1 {
+    background-color: #fff;
+}
+
+.about-p-2 {
+    background-color: #333;
+}
+
+.about-p-3 {
+    background-color: #eee;
+}
+
+.about-p-4 {
+    background-color: #3b3a48;
+}
+
+.about-p-5 {
+    background-color: #fff;
+}
+
+.about-p-5 > a {
+    display: block;
+    font-size: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.about-p img {
+    max-width: 100%;
+}
