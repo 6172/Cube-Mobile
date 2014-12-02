@@ -515,6 +515,18 @@ body {
     bottom: 20px;
 }
 
+@media screen and (orientation:portrait) {
+    .page-index .swipe-item > img:last-child {
+        display: none;
+    }
+}
+
+@media screen and (orientation:landscape) {
+    .page-index .swipe-item > img:first-child {
+        display: none;
+    }
+}
+
 /* -------------------------------------------------------------------------------- */
 /* Page Products
 /* -------------------------------------------------------------------------------- */
