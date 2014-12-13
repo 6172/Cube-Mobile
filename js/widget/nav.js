@@ -7,18 +7,16 @@ define(function(require, exports, module) {
     var opened = false;
     var body = doc.body,
         pageMask = doc.querySelector('#page-mask'),
-        button = doc.querySelector('#page > h1');
+        button = doc.querySelector('#menu-control');
 
     button.addEventListener('touchstart', function(e) {
-        if(e.target.tagName.toLowerCase() !== 'a') {
-            e.preventDefault();
-            if(!opened) {
-                body.classList.add('open');
-            }else {
-                body.classList.remove('open');
-            }
-            opened = !opened;
+        e.preventDefault();
+        if(!opened) {
+            body.classList.add('open');
+        }else {
+            body.classList.remove('open');
         }
+        opened = !opened;
     }, false);
 
     pageMask.addEventListener('touchstart', function(e) {

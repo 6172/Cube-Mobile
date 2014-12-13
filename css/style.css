@@ -415,17 +415,15 @@ body {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     color: #fff;
+    display: -webkit-flex;
+    display: flex;
     font-size: 15px;
     height: 50px;
+    -webkit-justify-content: space-between;
+    justify-content: space-between;
     line-height: 50px;
     padding: 0 0 0 10px;
     position: relative;
-}
-
-.menu-bar a {
-    color: #fff;
-    display: block;
-    width: 50%;
 }
 
 .co-logo {
@@ -436,32 +434,33 @@ body {
 }
 
 .menu-icon {
-    background-color: #fff;
-    height: 2px;
-    line-height: 12px;
-    position: absolute;
-    right: 15px;
-    text-indent: -2.5em;
-    top: 18px;
-    width: 17px;
+    height: 100%;
+    display: -webkit-flex;
+    display: flex;
 }
 
-.menu-icon:before,
-.menu-icon:after {
-    background-color: #fff;
+.menu-phone {
+    background: url(../images/phone.png) no-repeat 0% 50%;
+    background-size: 14px 24px;
+    height: 100%;
+    width: 14px;
+}
+
+.menu-control {
+    margin: 0 0 0 25px;
+    position: relative;
+    width: 70px;
+}
+
+.menu-control::after {
+    background-image: -webkit-linear-gradient(90deg, #fff 0px, #fff 2px, transparent 2px, transparent 4px, #fff 4px, #fff 6px, transparent 6px, transparent 8px, #fff 8px, #fff 10px);
     content: '';
-    height: 2px;
-    left: 0;
+    height: 10px;
+    margin: -5px 0 0;
     position: absolute;
-    width: 100%;
-}
-
-.menu-icon:before {
-    top: 5px;
-}
-
-.menu-icon:after {
-    top: 10px;
+    right: 14px;
+    top: 50%;
+    width: 17px;
 }
 
 #page-mask {
