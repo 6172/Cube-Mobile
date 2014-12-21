@@ -553,7 +553,13 @@ body {
     width: 100%;
 }
 
-.products-figure > img {
+.products-figure > a {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.products-figure img {
     display: block;
     max-width: 100%;
 }
